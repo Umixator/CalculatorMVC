@@ -1,0 +1,23 @@
+﻿@model CalcMVC.Models.CalculatorModel
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<html>
+<head>
+</head>
+     <body>
+         <h2 style="text-align: center">Trainee calculator</h2>
+         <div class="row" style="margin: 0 auto; width: 9%;">
+             @using (Html.BeginForm("/Index", "Calculator", FormMethod.Post))
+             {
+                 <div class="form-group">
+                     @*<label for="input">Write your calculations</label>*@
+                     <input type="text" id="input" name="input" placeholder="@Model.info" value="@Model.input" />
+                 </div>
+             }
+         </div>
+     </body>
+</html>
+
